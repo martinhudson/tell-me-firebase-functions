@@ -10,6 +10,7 @@ const db = admin.firestore();
  * Create user in Firestore on user account creation through Firebase Auth.
  */
 export const createUserDocument = () => {
+  //adding a comment
   functions.auth.user().onCreate(async (user) => {
     const newUser = {
       uid: user.uid,
